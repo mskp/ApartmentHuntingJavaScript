@@ -3,7 +3,7 @@ Approach — Declare an array that stores the farthest distance of a particular 
 */
 
 function apartmentHunting(blocks, requirements) {    
-    // Array to store the maximum distance of the farthest building
+    // Array to store the farthest distance of a particular service
     let maxDistancesAtBlocks = new Array(blocks.length).fill(Number.NEGATIVE_INFINITY);
     // Looping through all the blocks
     for (let i = 0; i < blocks.length; i++) {
@@ -21,7 +21,7 @@ function apartmentHunting(blocks, requirements) {
             maxDistancesAtBlocks[i] = Math.max(maxDistancesAtBlocks[i], nearestRequirementDistance);
         }
     }
-    // returning the index of the miniest distance of the array
+    // returning the index of the smallest value in the array
     let indexOfSmallestDistance = maxDistancesAtBlocks.indexOf(Math.min(...maxDistancesAtBlocks))
     return indexOfSmallestDistance;
 }
